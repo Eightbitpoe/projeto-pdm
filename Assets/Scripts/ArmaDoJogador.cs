@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialoguePink : MonoBehaviour {
+public class ArmaDoJogador : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{12B90334-6348-80C8-DF9D-1781CE1A1EC2}</ProjectGuid>
+    <ProjectGuid>{E5BD4108-3B68-CA1B-3E74-B080CC22F014}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ColliderDialogue.cs" />
-     <Compile Include="Assets\DialoguePink.cs" />
      <Compile Include="Assets\NPCController.cs" />
+     <Compile Include="Assets\Scripts\Arma.cs" />
+     <Compile Include="Assets\Scripts\ArmaDoJogador.cs" />
+     <Compile Include="Assets\Scripts\DialogoPink.cs" />
+     <Compile Include="Assets\Scripts\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\MunicaoSimples.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\teste.txt" />
  <Reference Include="UnityEngine.UI">
@@ -72,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{99EB1828-275D-C9FC-239B-659473EA51B4}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{71B9A279-9DA8-A65D-9339-F9627F4FC412}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
