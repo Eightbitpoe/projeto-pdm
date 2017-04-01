@@ -50,6 +50,7 @@
      <Compile Include="Assets\NPCController.cs" />
      <Compile Include="Assets\Scripts\Arma.cs" />
      <Compile Include="Assets\Scripts\ArmaDoJogador.cs" />
+     <Compile Include="Assets\Scripts\ControleDoPersonagem.cs" />
      <Compile Include="Assets\Scripts\DialogoPink.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\MunicaoSimples.cs" />
