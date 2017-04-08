@@ -42,7 +42,9 @@ public class ControleDoPersonagem : MonoBehaviour {
             if (chaos[i].gameObject != gameObject)
                 aterrado = true;
         }
-        animacao.SetBool("Ground", aterrado);
+        animacao.SetBool("chao", aterrado);
+
+        animacao.SetFloat("velocidadeY", corpoRigido.velocity.y);
     }
 
     public void Pular(bool pulo) {
@@ -56,7 +58,9 @@ public class ControleDoPersonagem : MonoBehaviour {
 
     public void Andar(float andar) {
         if (aterrado) {
-            animacao.SetFloat("velocidade", andar);
+            //print("vel no cdp pre-mathf " + andar);
+            //print("vel no cdp pos-mathf " + Mathf.Abs(andar));
+            animacao.SetFloat("velocidade", Mathf.Abs(andar));
 
             corpoRigido.velocity = new Vector2(andar * velocidadeMaxima, corpoRigido.velocity.y);
 
@@ -70,7 +74,11 @@ public class ControleDoPersonagem : MonoBehaviour {
     void Flipar() {
         olhandoDireita = !olhandoDireita;
 
-        sprite.flipX = true;
+        //sprite.flipX = true;
+
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
 

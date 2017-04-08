@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class ControleDoJogador : MonoBehaviour {
 
+    [SerializeField] KeyCode botPulo;
+
     ControleDoPersonagem personagem;
     bool pulo;
     bool irParaDireita;
@@ -18,7 +20,8 @@ public class ControleDoJogador : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 #if UNITY_EDITOR
-        pulo = Input.GetButtonDown("Jump");
+        if (!pulo)
+            pulo = Input.GetKeyDown(botPulo);
 #endif
 
 #if UNITY_ANDROID
@@ -30,12 +33,16 @@ public class ControleDoJogador : MonoBehaviour {
     void FixedUpdate() {
 #if UNITY_EDITOR
         float h = Input.GetAxis("Horizontal");
+        //print("vel no cdj: " + h);
         personagem.Andar(h);
+        personagem.Pular(pulo);
+        pulo = false;
 #endif
 
 #if UNITY_ANDROID
         if (irParaDireita)
             personagem.Andar(velAndroid);
+        else (personagem.Andar(-velAndroid);
 #endif
     }
 
